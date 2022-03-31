@@ -19,7 +19,7 @@ def collate(
     left_pad_source=False,
     left_pad_target=False,
     input_feeding=True,
-    pad_to_length=None,
+    pad_to_length=512,
 ):
     assert input_feeding
     if len(samples) == 0:
