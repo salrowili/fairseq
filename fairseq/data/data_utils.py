@@ -40,7 +40,7 @@ def collate_tokens(
     eos_idx=None,
     left_pad=False,
     move_eos_to_beginning=False,
-    pad_to_length=None,
+    pad_to_length=512,
     pad_to_multiple=1,
     pad_to_bsz=None,
 ):
