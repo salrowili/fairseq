@@ -108,14 +108,14 @@ class DenoisingTask(LegacyFairseqTask):
             help="when masking N tokens, replace with 0, 1, or N tokens (use -1 for N)",
         )
         parser.add_argument(
-            "--max-source-positions",
+            "--max-source-position",
             default=1024,
             type=int,
             metavar="N",
             help="max number of tokens in the source sequence",
         )
         parser.add_argument(
-            "--max-target-positions",
+            "--max-target-position",
             default=1024,
             type=int,
             metavar="N",
@@ -263,7 +263,7 @@ class DenoisingTask(LegacyFairseqTask):
 
     def max_positions(self):
         """Return the max sentence length allowed by the task."""
-        return (self.args.max_source_positions, self.args.max_target_positions)
+        return (self.args.max_source_position, self.args.max_target_position)
 
     @property
     def source_dictionary(self):
